@@ -457,3 +457,6 @@ rm -rf -- $RPM_BUILD_ROOT
 %endif
 
 %changelog
+* Mon Jul 11 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 033-438
+- new package built with tito
+
