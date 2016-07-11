@@ -9,8 +9,8 @@
 %endif
 
 Name: dracut
-Version: xxx
-Release: xxx
+Version: 033
+Release: 438
 
 Summary: Initramfs generator using udev
 %if 0%{?fedora} || 0%{?rhel}
