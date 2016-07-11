@@ -15,6 +15,8 @@ SKIP="$dracutbasedir/skipcpio"
 if [[ $MACHINE_ID ]] && [[ -d /boot/${MACHINE_ID} || -L /boot/${MACHINE_ID} ]] ; then
     IMG="/boot/${MACHINE_ID}/${KERNEL_VERSION}/initrd"
 fi
+[[ -f $IMG ]] || IMG="/boot/MAP-mmconf-$(sed -nre 's#.*active_MAP_bank=([0-9]).*#\1#p' /proc/cmdline)/initrd"
+[[ -f $IMG ]] || IMG="/run/initramfs/live/syslinux/initrd0.img"
 [[ -f $IMG ]] || IMG="/boot/initramfs-${KERNEL_VERSION}.img"
 
 cd /run/initramfs
