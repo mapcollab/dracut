@@ -10,7 +10,7 @@
 
 Name: dracut
 Version: 033
-Release: 438
+Release: 438.1
 
 Summary: Initramfs generator using udev
 %if 0%{?fedora} || 0%{?rhel}
@@ -457,6 +457,10 @@ rm -rf -- $RPM_BUILD_ROOT
 %endif
 
 %changelog
+* Mon Jul 11 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 033-438.1
+- tito: use ReleaseTagger (tomasz.rostanski@thalesgroup.com)
+- dracut.spec: fix source package name (tomasz.rostanski@thalesgroup.com.pl)
+
 * Mon Jul 11 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 033-438
 - new package built with tito
 
