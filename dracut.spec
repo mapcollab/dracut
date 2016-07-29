@@ -10,7 +10,7 @@
 
 Name: dracut
 Version: 033
-Release: 438.1
+Release: 438.2
 
 Summary: Initramfs generator using udev
 %if 0%{?fedora} || 0%{?rhel}
@@ -457,6 +457,13 @@ rm -rf -- $RPM_BUILD_ROOT
 %endif
 
 %changelog
+* Fri Jul 29 2016 Michal Gawlik <michal.gawlik@thalesgroup.com> 033-438.2
+- MPS: always copy /etc/modprobe.d to live/rootfs initramfs
+  (michal.gawlik@thalesgroup.com)
+- MPS: change default writable overlay size to 2GB
+  (michal.gawlik@thalesgroup.com)
+- MPS: fix initramfs location (michal.gawlik@thalesgroup.com)
+
 * Mon Jul 11 2016 Tomasz Rostanski <tomasz.rostanski@thalesgroup.com> 033-438.1
 - tito: use ReleaseTagger (tomasz.rostanski@thalesgroup.com)
 - dracut.spec: fix source package name (tomasz.rostanski@thalesgroup.com.pl)
